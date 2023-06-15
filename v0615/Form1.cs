@@ -16,7 +16,6 @@ namespace v0615
             {
                 vx[i] = rand.Next(-10, 11);
                 vy[i] = rand.Next(-10, 11);
-                
             }
         }
 
@@ -27,19 +26,19 @@ namespace v0615
 
             if (label1.Left <= 0)
             {
-                vx[0] = Math.Abs(vx[0] + (vx[0] / 10));
+                vx[0] = Math.Abs(vx[0]);
             }
             else if (label1.Right >= ClientSize.Width)
             {
-                vx[0] = -Math.Abs(vx[0] + (vx[0] / 10));
+                vx[0] = -Math.Abs(vx[0]);
             }
             if (label1.Top <= 0)
             {
-                vy[0] = Math.Abs(vy[0] + (vy[0] / 10));
+                vy[0] = Math.Abs(vy[0]);
             }
             else if (label1.Bottom >= ClientSize.Height)
             {
-                vy[0] = -Math.Abs(vy[0] + (vy[0] / 10));
+                vy[0] = -Math.Abs(vy[0]);
             }
 
 
@@ -49,19 +48,19 @@ namespace v0615
 
             if (label2.Left <= 0)
             {
-                vx[1] = Math.Abs(vx[1] + (vx[1] / 10));
+                vx[1] = Math.Abs(vx[1]);
             }
             else if (label2.Right >= ClientSize.Width)
             {
-                vx[1] = -Math.Abs(vx[1] + (vx[1] / 10));
+                vx[1] = -Math.Abs(vx[1]);
             }
             if (label2.Top <= 0)
             {
-                vy[1] = Math.Abs(vy[1] + (vy[1] / 10));
+                vy[1] = Math.Abs(vy[1]);
             }
             else if (label2.Bottom >= ClientSize.Height)
             {
-                vy[1] = -Math.Abs(vy[1] + (vy[1] / 10));
+                vy[1] = -Math.Abs(vy[1]);
             }
 
 
@@ -71,19 +70,27 @@ namespace v0615
 
             if (label3.Left <= 0)
             {
-                vx[2] = Math.Abs(vx[2] + (vx[2] / 10));
+                vx[2] = Math.Abs(vx[2]);
             }
             else if (label3.Right >= ClientSize.Width)
             {
-                vx[2] = -Math.Abs(vx[2] + (vx[2] / 10));
+                vx[2] = -Math.Abs(vx[2]);
             }
             if (label3.Top <= 0)
             {
-                vy[2] = Math.Abs(vy[2] + (vy[2] / 10));
+                vy[2] = Math.Abs(vy[2]);
             }
             else if (label3.Bottom >= ClientSize.Height)
             {
-                vy[2] = -Math.Abs(vy[2] + (vy[2] / 10));
+                vy[2] = -Math.Abs(vy[2]);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                MessageBox.Show($"{i}");
             }
         }
     }
